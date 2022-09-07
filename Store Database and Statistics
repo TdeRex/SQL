@@ -1,0 +1,44 @@
+--Create a grocery store database
+	
+
+	CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
+	
+
+	INSERT INTO store VALUES (1, "Batteries", "Electronics", 10.99, 60);
+	INSERT INTO store VALUES (2, "Mango", "Produce", 2.99, 95);
+	INSERT INTO store VALUES (3, "Toothbrush", "Hygiene", 2.99, 55);
+	INSERT INTO store VALUES (4, "Lentils", "Bulk", 0.99, 50);
+	INSERT INTO store VALUES (5, "Veggie burger", "Meat", 4.99, 85);
+	INSERT INTO store VALUES (6, "Vegan salsa", "Fresh", 3.25, 43);
+	INSERT INTO store VALUES (7, "Dip", "Fresh", 2.99, 45);
+	INSERT INTO store VALUES (8, "grapes", "Hygiene", 2.99, 70);
+	INSERT INTO store VALUES (9, "plant-based pies", "Frozen", 4.99, 75);
+	INSERT INTO store VALUES (10, "Frozen chips", "Frozen", 0.99, 55);
+	INSERT INTO store VALUES (11, "smoothie berries", "Frozen", 2.99, 38);
+	INSERT INTO store VALUES (12, "Oats", "Bulk", 1.99, 94);
+	INSERT INTO store VALUES (13, "Panadol", "Health", 4.99,87);
+	INSERT INTO store VALUES (14, "Tamari", "Health", 2.99, 20);
+	INSERT INTO store VALUES (15, "Chocolate", "Snacks", 1.99, 99);
+	INSERT INTO store VALUES(16,"Snickers", "Snacks",0.99,82);
+	
+  INSERT INTO store VALUES (17,"Light bulbs", "Electronics",7.99,14);
+	INSERT INTO store VALUES (18,"Icecream", "Frozen",6.99,67);
+  INSERT INTO store VALUES (19,"Washing liquid", "Laundry",6.99,88);
+  INSERT INTO store VALUES (20,"Vinegar", "Cooking",2.99,71);
+
+	--display the database ordered by price. 
+	SELECT * FROM store
+	ORDER BY price desc; 
+	
+
+	--what is the avg price of items in the Fresh section? 
+	SELECT AVG(price) "avg Fresh item price"
+	FROM store
+	where section='Fresh'; 
+	
+
+	--what are the most 3 popular items? 
+	SELECT item, price, popularity
+	FROM store
+	order by popularity desc
+	limit 3; 
