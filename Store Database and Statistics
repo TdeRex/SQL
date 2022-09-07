@@ -20,25 +20,31 @@
 	INSERT INTO store VALUES (14, "Tamari", "Health", 2.99, 20);
 	INSERT INTO store VALUES (15, "Chocolate", "Snacks", 1.99, 99);
 	INSERT INTO store VALUES(16,"Snickers", "Snacks",0.99,82);
-	
-        INSERT INTO store VALUES (17,"Light bulbs", "Electronics",7.99,14);
+	INSERT INTO store VALUES (17,"Light bulbs", "Electronics",7.99,14);
 	INSERT INTO store VALUES (18,"Icecream", "Frozen",6.99,67);
-        INSERT INTO store VALUES (19,"Washing liquid", "Laundry",6.99,88);
+	INSERT INTO store VALUES (19,"Washing liquid", "Laundry",6.99,88);
         INSERT INTO store VALUES (20,"Vinegar", "Cooking",2.99,71);
 
 	--display the database ordered by price. 
 	SELECT * FROM store
 	ORDER BY price desc; 
 	
+	--what is the total (SUM) price of items in the Frozen section? 
+	SELECT SUM(price) "total Frozen item price"
+	FROM store
+	where section='Frozen'; 
 
 	--what is the avg price of items in the Fresh section? 
 	SELECT AVG(price) "avg Fresh item price"
 	FROM store
 	where section='Fresh'; 
 	
-
 	--what are the most 3 popular items? 
 	SELECT item, price, popularity
 	FROM store
 	order by popularity desc
 	limit 3; 
+
+	--display the database ordered by section. 
+	SELECT * FROM store
+	ORDER BY section asc;
