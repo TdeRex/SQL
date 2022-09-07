@@ -21,10 +21,10 @@
 	INSERT INTO store VALUES (15, "Chocolate", "Snacks", 1.99, 99);
 	INSERT INTO store VALUES(16,"Snickers", "Snacks",0.99,82);
 	
-  INSERT INTO store VALUES (17,"Light bulbs", "Electronics",7.99,14);
+        INSERT INTO store VALUES (17,"Light bulbs", "Electronics",7.99,14);
 	INSERT INTO store VALUES (18,"Icecream", "Frozen",6.99,67);
-  INSERT INTO store VALUES (19,"Washing liquid", "Laundry",6.99,88);
-  INSERT INTO store VALUES (20,"Vinegar", "Cooking",2.99,71);
+        INSERT INTO store VALUES (19,"Washing liquid", "Laundry",6.99,88);
+        INSERT INTO store VALUES (20,"Vinegar", "Cooking",2.99,71);
 
 	--display the database ordered by price. 
 	SELECT * FROM store
